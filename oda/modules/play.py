@@ -136,7 +136,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    command(["musicplayer", f"musicplayer@{BOT_USERNAME}"])
+    command(["musicplayer", "mplayer", f"mplayer@{BOT_USERNAME}",  f"musicplayer@{BOT_USERNAME}"])
     & ~filters.edited
     & ~filters.bot
     & ~filters.private
@@ -204,7 +204,7 @@ async def closed(_, query: CallbackQuery):
 
 # play
 @Client.on_message(
-    command(["play", f"play@{BOT_USERNAME}"])
+    command(["play", "bplay", "b", f"bplay@{BOT_USERNAME}", f"play@{BOT_USERNAME}"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -312,9 +312,9 @@ async def play(_, message: Message):
             )
 
         file_name = get_file_name(audio)
-        url = f"https://t.me/{UPDATE}"
+        url = f"https://t.me/BaytutuUpdates"
         title = audio.title
-        thumb_name = "https://telegra.ph/file/a7adee6cf365d74734c5d.png"
+        thumb_name = "https://telegra.ph/file/69702f029f2abaca6c95d.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -322,10 +322,9 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🚨 Support", url=f"t.me/{SUPPORT}"),
-                    InlineKeyboardButton("📡 Updates", url=f"t.me/{UPDATE}"),
+                    InlineKeyboardButton("📡 Updates", url="t.me/BaytutuUpdates"),
+                    InlineKeyboardButton(text="🗑 Close", callback_data="cls"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
 
@@ -360,10 +359,9 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🚨 Support", url=f"t.me/{SUPPORT}"),
-                        InlineKeyboardButton("📡 Updates", url=f"t.me/{UPDATE}"),
+                        InlineKeyboardButton("📡 Updates", url="t.me/BaytutuUpdates"),
+                        InlineKeyboardButton(text="🗑 Close", callback_data="cls"),
                     ],
-                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
                 ]
             )
 
@@ -453,7 +451,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "🧐 **Song not found! Try searching with the correct title\nExample » /play In The End\n\nChannel : @UserLazyXBot**"
+                "🧐 **Song not found! Try searching with the correct title\nExample » `/play` or `/bplay`  Stay\n\nChannel : @BaytutuUpdates**"
             )
         await lel.edit("🔎 **Finding the song...**")
         query = message.text.split(None, 1)[1]
@@ -481,7 +479,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "❌ Song not found.\n\nTry another keyword or `/play [yt url]`."
+                "❌ Song not found.\n\nTry another keyword or `/play` or `/dplay` [yt url]."
             )
             print(str(e))
             return
@@ -489,10 +487,9 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🚨 Support", url=f"t.me/{SUPPORT}"),
-                    InlineKeyboardButton("📡 Updates", url=f"t.me/{UPDATE}"),
+                    InlineKeyboardButton("📡 Updates", url=f"t.me/BaytutuUpdates"),
+                    InlineKeyboardButton(text="🗑 Close", callback_data="cls"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
 

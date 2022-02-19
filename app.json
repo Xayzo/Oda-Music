@@ -1,8 +1,8 @@
 {
-    "name": "Oda Music",
+    "name": "Music Player",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/UserLazy/Oda-Music",
+    "repository": "https://github.com/Xayzo/Oda-Music",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -12,37 +12,37 @@
         "OWNER_ID": {
             "description": "fill with your telegram id as the owner of the bot",
             "required": true,
-            "value": ""
+            "value": "1959562764"
         },
         "ASSID": {
             "description": "fill with telegram id of account",
             "required": true,
-            "value": ""
+            "value": "1906783543"
         },
         "ASSNAME": {
             "description": "fill with telegram name of account",
             "required": true,
-            "value": ""
+            "value": "Starlight"
         },
         "ASSUSERNAME": {
             "description": "fill with telegram username of account without @",
             "required": true,
-            "value": ""
+            "value": "kuraiyow"
         },
         "BOT_ID": {
             "description": "fill with telegram id of bot",
             "required": true,
-            "value": ""
+            "value": "5174152335"
         },
         "BOT_USERNAME": {
             "description": "fill with telegram username of bot without @",
             "required": true,
-            "value": ""
+            "value": "BaytutuRobot"
         },
         "BOT_NAME": {
             "description": "fill with telegram name of bot",
             "required": true,
-            "value": ""
+            "value": "Baytutu Robot"
         },
         "HEROKU_API_KEY": {
             "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -57,7 +57,7 @@
         "BG_IMG": {
             "description": "direct link for backgroud",
             "required": true,
-            "value": ""
+            "value": "https://telegra.ph/file/69702f029f2abaca6c95d.png"
         },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
@@ -72,12 +72,12 @@
         "SUDO_USERS": {
             "description": "fill with the user id who can access all function in your bot (separate with space).",
             "required": true,
-            "value": ""
+            "value": "1780335957"
         },
         "DURATION_LIMIT": {
             "description": "filled, don't change this !",
             "required": true,
-            "value": ""
+            "value": "1200"
         },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",

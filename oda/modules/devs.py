@@ -16,7 +16,7 @@ from oda.utils.filters import command
 from oda.modules import check_heroku
 
 
-@app.on_message(command(["rebootmusic", "restart"]) & filters.user(OWNER_ID))
+@app.on_message(command(["rebootmusic", "restart", "brestart"]) & filters.user(OWNER_ID))
 @check_heroku
 async def gib_restart(client, message, hap):
     msg_ = await message.reply_text(f"[{BOT_NAME}] - Restarting...")
